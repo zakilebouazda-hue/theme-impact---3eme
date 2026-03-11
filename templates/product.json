@@ -162,11 +162,11 @@
         "loox_reviews_loox_dynamic_section_8zRKd8": {
           "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
-            "reviews_to_display": "",
+            "reviews_to_display": "product_reviews_only",
             "default_tab": "automatic",
             "only_photos": false,
             "aggregated": false,
-            "limit": 20,
+            "limit": 10,
             "hide_thumbnails": false,
             "maxwidth": 1080,
             "is_sample": true
