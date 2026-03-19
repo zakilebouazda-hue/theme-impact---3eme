@@ -21,8 +21,7 @@
         "liquid_6a3inE": {
           "type": "liquid",
           "settings": {
-            "liquid": "<div style=\"margin-top: -8px;\">\n  <p style=\"font-size: 14px; color: #6b7280; margin: 0 0 6px 0;\">\n<div style=\"margin-top:-8px;\"><p style=\"font-size:14px;color:#6b7280;margin:0 0 6px 0;\">30 Parches - 1 Mes de Energia</p><div style=\"display:flex;align-items:center;gap:6px;\"><span style=\"color:#f59e0b;font-size:16px;\">★★★★★</span><span style=\"font-size:13px;color:#374151;font-weight:600;\">+12.000 resenas verificadas</span></div></div>   1 Beutel (180 Softgels) — 60 Tage Vorrat\n  </p>\n<div style=\"margin-top:-8px;\"><p style=\"font-size:14px;color:#6b7280;margin:0 0 6px 0;\">30 Parches — 1 Mes de Energia</p><div style=\"display:flex;align-items:center;gap:6px;\"><span style=\"color:#f59e0b;font-size:15px;\">★★★★★</span><span style=\"font-size:13px;color:#374151;font-weight:600;\">+12.000 resenas verificadas</span></div></div>  <div style=\"display: flex; align-items: center; gap: 6px;\">\n    <img \n      src=\"https://cdn.shopify.com/s/files/1/0814/7897/5709/files/Capture_d_ecran_le_2026-02-27_a_01.08.15_430x.png?v=1772177363\"\n      alt=\"étoiles\"\n      style=\"height: 16px; width: auto;\"\n    />\n    <span style=\"font-size: 11px; font-weight: 600;\">\n      +4.800 Männer haben ihre Vitalität zurückgewonnen\n    </span>\n  </div>\n</div>"
-          }
+        "liquid": "<div style=\"margin-top:-8px;\"><p style=\"font-size:14px;color:#6b7280;margin:0 0 6px 0;\">30 Parches - 1 Mes de Energia<\/p><div style=\"display:flex;align-items:center;gap:6px;\"><span style=\"color:#f59e0b;font-size:16px;\">&#9733;&#9733;&#9733;&#9733;&#9733;<\/span><span style=\"font-size:13px;color:#374151;font-weight:600;\">+12.000 resenas verificadas<\/span><\/div><\/div>"          }
         },
         "liquid_hVX3LG": {
           "type": "liquid",
