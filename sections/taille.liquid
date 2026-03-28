@@ -1,0 +1,319 @@
+<!-- Guide des tailles - Custom code pour page produit -->
+<div class="size-guide-wrapper">
+  <button class="size-guide-btn" aria-label="Guide des tailles">
+    <span class="btn-icon">📏</span>
+    Quelle taille de chien convient à mon chien ?
+  </button>
+  
+  <div class="size-guide-modal">
+    <div class="size-guide-content">
+      <div class="modal-header">
+        <h3>Guide des tailles</h3>
+        <button class="close-btn" aria-label="Fermer">×</button>
+      </div>
+      
+      <div class="size-table-wrapper">
+        <table class="size-table">
+          <thead>
+            <tr>
+              <th>Taille</th>
+              <th>Cou (cm)</th>
+              <th>Poitrine (cm)</th>
+              <th>Poids (kg)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="size-s">
+              <td>S</td>
+              <td>32-49</td>
+              <td>34-43</td>
+              <td><span class="stock-signal"><span class="dot"></span>jusqu'à 8</span></td>
+            </tr>
+            <tr class="size-m">
+              <td>M</td>
+              <td>38-60</td>
+              <td>39-75</td>
+              <td>8-20</td>
+            </tr>
+            <tr class="size-l">
+              <td>L</td>
+              <td>42-66</td>
+              <td>50-69</td>
+              <td>20-35</td>
+            </tr>
+            <tr class="size-xl">
+              <td>XL</td>
+              <td>52-85</td>
+              <td>60-98</td>
+              <td>à partir de 30</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="modal-footer">
+        <p>En cas de doute, nous vous recommandons de choisir une taille supérieure. Échange gratuit possible.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Poppins + animations */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.size-guide-wrapper {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Bouton principal */
+.size-guide-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.size-guide-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
+}
+
+.size-guide-btn:active {
+  transform: translateY(0);
+}
+
+/* Modal */
+.size-guide-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+.size-guide-modal.active {
+  display: flex;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.size-guide-content {
+  background: white;
+  border-radius: 20px;
+  max-width: 480px;
+  max-height: 90vh;
+  width: 100%;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  animation: slideUp 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 28px 0;
+  margin-bottom: 20px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #666;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.close-btn:hover {
+  background: #f3f4f6;
+  color: #111;
+}
+
+/* Tableau */
+.size-table-wrapper {
+  padding: 0 28px 24px;
+}
+
+.size-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  background: white;
+}
+
+.size-table th {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: 16px 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 13px;
+  color: #374151;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.size-table td {
+  padding: 16px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.size-table tr:hover {
+  background: #fef7ed;
+}
+
+.size-table .size-s:hover { border-left: 4px solid #10b981; }
+.size-table .size-m:hover { border-left: 4px solid #3b82f6; }
+.size-table .size-l:hover { border-left: 4px solid #f59e0b; }
+.size-table .size-xl:hover { border-left: 4px solid #ef4444; }
+
+/* Signal vert du précédent code */
+.stock-signal {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #059669;
+  font-weight: 500;
+}
+
+.stock-signal .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  position: relative;
+}
+
+.stock-signal .dot::before,
+.stock-signal .dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid #22c55e;
+  opacity: 0.6;
+  animation: signalPulse 1.8s infinite;
+}
+
+.stock-signal .dot::after {
+  animation-delay: 0.9s;
+}
+
+@keyframes signalPulse {
+  0% { transform: scale(1); opacity: 0.6; }
+  70% { transform: scale(2.2); opacity: 0; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+/* Footer */
+.modal-footer {
+  padding: 0 28px 28px;
+  background: #f8fafc;
+  border-top: 1px solid #e5e7eb;
+  border-radius: 0 0 20px 20px;
+}
+
+.modal-footer p {
+  margin: 0;
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .size-guide-content {
+    margin: 10px;
+    border-radius: 16px;
+    max-height: 95vh;
+  }
+  
+  .size-table th,
+  .size-table td {
+    padding: 12px 8px;
+    font-size: 13px;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.querySelector('.size-guide-btn');
+  const modal = document.querySelector('.size-guide-modal');
+  const closeBtn = document.querySelector('.close-btn');
+  
+  function openModal() {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  
+  btn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+  
+  // Fermer au clic dehors
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) closeModal();
+  });
+  
+  // Fermer avec Échap
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
+});
+</script>
